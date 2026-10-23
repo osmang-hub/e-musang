@@ -1,0 +1,314 @@
+/* ==========================================================
+   E-MUSANG - Stylesheet bersama
+   Dipakai oleh: index.php, rakorbang.php, dau.php, kerjasama.php
+   ========================================================== */
+
+/* ---------- Dasar ---------- */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f0f4f8;
+    color: #1e293b;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-custom {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1d4ed8 100%);
+    padding: 0.9rem 1rem;
+}
+
+/* ---------- Banner / Hero ---------- */
+.hero-banner {
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #3b82f6 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 15px 25px -5px rgba(37, 99, 235, 0.25);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #3b82f6 100%);
+    color: white;
+    border-radius: 24px;
+    padding: 3.5rem 2rem;
+    box-shadow: 0 20px 30px -10px rgba(37, 99, 235, 0.3);
+}
+
+/* ---------- Card ---------- */
+.card-modern {
+    border: none;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: all 0.25s ease;
+}
+
+.card-sektor {
+    border: none;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.card-sektor:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(30, 58, 138, 0.12);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+/* ---------- Tombol ---------- */
+.btn-blue {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-blue:hover {
+    background-color: #1d4ed8;
+    color: #ffffff;
+}
+
+/* ---------- Pilihan RT (rakorbang.php) ---------- */
+.btn-rt {
+    border-radius: 10px;
+    padding: 8px 18px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #475569;
+    transition: all 0.2s ease;
+}
+
+.btn-rt:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.btn-rt.active {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* ---------- Tab kategori (rakorbang.php) ---------- */
+.nav-category {
+    border: none;
+    gap: 10px;
+}
+
+.nav-category .nav-link {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 20px;
+    font-weight: 600;
+    color: #64748b;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    transition: all 0.2s ease;
+}
+
+.nav-category .nav-link:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.nav-category .nav-link.active-kat {
+    background: #2563eb !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+}
+
+/* ---------- Badge status ---------- */
+.badge-status-acc {
+    background-color: #d1fae5;
+    color: #065f46;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.badge-status-pending {
+    background-color: #fee2e2;
+    color: #991b1b;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+/* ---------- Foto ---------- */
+.img-preview {
+    border-radius: 12px;
+    height: 120px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* ---------- Tambahan (perbaikan) ---------- */
+
+/* Footer selalu menempel di bawah walau konten sedikit */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Foto kartu DAU */
+.img-dau {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Logo di hero beranda: responsif */
+.hero-logo {
+    height: 250px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 767.98px) {
+    .hero-logo {
+        height: 140px;
+    }
+}
+
+/* ---------- Pemetaan Wilayah: pratinjau PDF ---------- */
+.pdf-frame {
+    width: 100%;
+    height: 78vh;
+    border: 0;
+    background: #e2e8f0;
+}
+
+/* ---------- DAU: kartu bisa diklik + galeri foto ---------- */
+.card-klik {
+    cursor: pointer;
+}
+
+.card-klik:hover,
+.card-klik:focus-visible {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(30, 58, 138, 0.15);
+    outline: none;
+}
+
+.dau-cover {
+    position: relative;
+}
+
+.dau-cover .badge-jumlah {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(15, 23, 42, 0.75);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 999px;
+}
+
+.galeri-img {
+    width: 100%;
+    height: 62vh;
+    object-fit: contain;
+    background: #0f172a;
+}
+
+.galeri-thumb {
+    width: 72px;
+    height: 54px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.55;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.galeri-thumb:hover {
+    opacity: 0.9;
+}
+
+.galeri-thumb.aktif {
+    opacity: 1;
+    border-color: #2563eb;
+}
+
+/* ---------- Admin ---------- */
+.bg-login {
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1d4ed8 100%);
+}
+
+.admin-thumb {
+    width: 72px;
+    height: 54px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background: #f1f5f9;
+}
+
+.foto-edit {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 8px;
+    background: #ffffff;
+}
+
+.foto-edit img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ---------- Kerjasama: kartu tanpa foto + lencana PDF ---------- */
+.cover-kosong {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    border: 1px dashed #cbd5e1;
+    background: #f1f5f9;
+    color: #94a3b8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+}
+
+.cover-kosong i {
+    font-size: 2.5rem;
+}
+
+.dau-cover .badge-pdf {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    background: rgba(220, 38, 38, 0.9);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 999px;
+}
